@@ -1,0 +1,8 @@
+{
+	"application":{
+		"name": "Gruntstart"
+	},
+	"express":{
+		"port": 3001
+	}
+}
