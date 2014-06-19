@@ -1,0 +1,24 @@
+{
+  "name": "gruntstart",
+  "version": "0.0.0",
+  "description": "Bootstrap express apps with grunt based tooling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/one-aalam/gruntstart.git"
+  },
+  "keywords": [
+    "grunt",
+    "express",
+    "socket.io"
+  ],
+  "author": "Aftab Alam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/one-aalam/gruntstart/issues"
+  },
+  "homepage": "https://github.com/one-aalam/gruntstart"
+}
