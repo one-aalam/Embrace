@@ -34,6 +34,8 @@
   "devDependencies": {
     "debug": "^1.0.2",
     "mocha": "^1.20.1",
-    "supertest": "^0.13.0"
+    "morgan": "^1.1.1",
+    "supertest": "^0.13.0",
+    "winston": "^0.7.3"
   }
 }
