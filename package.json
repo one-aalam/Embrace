@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/one-aalam/gruntstart/issues"
   },
-  "homepage": "https://github.com/one-aalam/gruntstart"
+  "homepage": "https://github.com/one-aalam/gruntstart",
+  "dependencies": {
+    "express": "^4.4.3"
+  }
 }
