@@ -1,9 +1,9 @@
 {
 	"application":{
-		"name": "Gruntstart"
+		"name": "Gruntstart: Production"
 	},
 	"express":{
-		"port": 3000
+		"port": 3001
 	},
 	"logger":{
 		"filename": "logs/run.log",
