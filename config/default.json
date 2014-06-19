@@ -8,5 +8,11 @@
 	"logger":{
 		"filename": "logs/run.log",
 		"level":"silly"
+	},
+	"db":{
+		"mongo": {
+        	"host": "localhost",
+            "db": "app_dev"
+    	}
 	}
 }
