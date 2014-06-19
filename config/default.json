@@ -4,5 +4,9 @@
 	},
 	"express":{
 		"port": 3001
+	},
+	"logger":{
+		"filename": "logs/run.log",
+		"level":"silly"
 	}
 }
