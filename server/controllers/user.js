@@ -1,5 +1,5 @@
 
 
-exports.setup = function(app, modelone, model2){
+exports.setup = function(Router, User, Post){
 	
 }
