@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+	h1 Posts #{posts.length}
+	.app-body
+		if posts.length
+		p available!:)
+			each post in posts
+				p.post
+					h3 #{post.title}
+					p.
+						#{post.body}
+					a(href="post/#{post._id}/edit")	edit&nbsp;
+					a(href="post/#{post._id}/delete")	Delete&nbsp;
+					if post.status == 0
+						a(href="post/#{post._id}/publish")	Publish&nbsp;
+

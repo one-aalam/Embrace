@@ -1,0 +1,33 @@
+extends ../layout
+
+block content
+	h1 Add new Post
+	form.app(method="POST",
+			 action="/post/new",
+			 enctype="application/x-www-form-urlencoded")
+		p.field title:
+			input(type="text",
+				   name="title",
+				   id="title",
+				   size="150",
+				   value="",
+				   required)
+		p.field body:
+			textarea(name="body",
+				   id="body",
+				   rows="4",
+				   cols="150")
+		p.field type:
+			select(name="type",id="type")
+				option(value="post",selected)	post
+				option(value="page")	page
+		
+		p.field tags:
+			input(type="text",
+				   name="tags",
+				   id="tags",
+				   size="150",
+				   value="")
+		p.field
+			input(type="submit",name="submit",id="submit",value="add")
+	

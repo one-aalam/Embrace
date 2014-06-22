@@ -14,5 +14,23 @@
         	"host": "localhost",
             "db": "app_dev"
     	}
+	},
+
+	"profiles":{
+		"local":[
+
+		],
+		"http":[
+
+		],
+		"twitter":{
+
+		},
+		"google":{
+
+		},
+		"facebook":{
+
+		}
 	}
 }
