@@ -14,6 +14,14 @@ exports.setup = function(Router, User, Post){
 
 	Router.route('/users')
 		  .get(function(req, res){
+			  
+			 User.insert({
+				 'firstname':'aftab',
+				 'lastname':'alam',
+				 'email':'aftabbuddy@gmail.com'
+				}, function(user){
+				console.log(user);
+			});
 		  	 res.send('User index');
 		  });
 
