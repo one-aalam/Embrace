@@ -2,7 +2,12 @@ exports.create = create = function(){
     
 }
 
-exports.setup = function(Router, User, Post){
+exports.setup = function(Router, Db, User, Post){
+
+	var User = Db.crudify(User);
+	    User.getOrAdd({'email':'aftabbuddy@gmailx.com'}, function(err, doc){
+	    	console.log(doc);
+	    });
 
 	Router.param('user_id', function(req, res, next, id) {
 		req.user = {
