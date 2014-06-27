@@ -2,12 +2,13 @@ exports.create = create = function(){
     
 }
 
-exports.setup = function(Router, Db, User, Post){
+exports.setup = function(Router, Db, User, Post, Mw){ console.log(Mw);
 
 	var User = Db.crudify(User);
+	/*
 	    User.getOrAdd({'email':'aftabbuddy@gmailx.com'}, function(err, doc){
 	    	console.log(doc);
-	    });
+	    });*/
 
 	Router.param('user_id', function(req, res, next, id) {
 		req.user = {
@@ -18,17 +19,34 @@ exports.setup = function(Router, Db, User, Post){
 	});
 
 	Router.route('/users')
-		  .get(function(req, res){
-			  
-			 User.insert({
-				 'firstname':'aftab',
-				 'lastname':'alam',
-				 'email':'aftabbuddy@gmail.com'
-				}, function(user){
-				console.log(user);
-			});
-		  	 res.send('User index');
-		  });
+
+		  .get(function(req, res, next){
+		  	 User.all(function(err, docs){
+		  	 	res.send(docs);
+		  	 });
+		  })
+
+		  .post(
+		  	// Middleware: Validator
+		  	Mw.validate({
+		  		'firstname':['isEmail'],
+		  		'email':['isEmail']
+		  	}),
+
+		  	//Mw.dataMap({allow:[], remove[]}),
+
+		  	// Route: handler
+		  	function(req, res, next){ 
+			 
+			  	User.add({
+					 'firstname':req.body.firstname,
+					 'lastname':req.body.lastname,
+					 'email':req.body.email
+					}, function(user){
+					res.send(user);
+				});
+		  	}
+		  );
 
 	Router.route('/users/:user_id')
 			.get(function(req, res, next) {
