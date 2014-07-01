@@ -2,7 +2,7 @@ exports.create = create = function(){
     
 }
 
-exports.setup = function(Router, Db, User, Post, Mw){ console.log(Mw);
+exports.setup = function(Router, Db, User, Post, Mw){
 
 	var User = Db.crudify(User);
 	/*

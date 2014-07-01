@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+	h1="Sign in"
+	
+	form(id="register", method="post", action="sign-in")
+		input(type=text, name="firstname", id="firstname")
+		input(type=email, name="email", id="email")
+		input(type=password, name="password", id="password")
+		button(type=submit, name="register", value="register")
