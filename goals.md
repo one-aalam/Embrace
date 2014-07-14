@@ -17,6 +17,7 @@
 10. SASS, Less, Stylus library integration ( with all bells & whistles)
 11. Generators
 12. Toolings and watch with live-reload and browser sync
+13. REPL
 
 
 Roadmap

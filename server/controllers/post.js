@@ -1,8 +1,9 @@
 
 
 
-exports.setup = function(Router, Db, Post){
+exports.setup = function(Router, Db, App, Post){
 	// router
+	// 
 	
 	var Post = Db.crudify(Post);
 		/*

@@ -2,7 +2,7 @@ exports.create = create = function(){
     
 }
 
-exports.setup = function(Router, Db, User, Post, Mw){
+exports.setup = function(Router, App, Db, User, Post, Mw){
 
 	var User = Db.crudify(User);
 	/*
@@ -20,7 +20,9 @@ exports.setup = function(Router, Db, User, Post, Mw){
 
 	Router.route('/users')
 
-		  .get(function(req, res, next){
+		  .get(function(req, res, next){ 
+		  	var _io = App.get('_io');
+		  		console.log(_io);
 		  	 User.all(function(err, docs){
 		  	 	res.send(docs);
 		  	 });
