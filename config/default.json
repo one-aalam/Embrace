@@ -15,6 +15,11 @@
             "db": "app_dev"
     	}
 	},
+	"session":{
+		"secret":"SECRET_PHRASE",
+		"secure":false,
+		"key":"express.sid"
+	},
 
 	"profiles":{
 		"local":[

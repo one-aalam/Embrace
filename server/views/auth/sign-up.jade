@@ -1,4 +1,11 @@
 extends ../layout
 
 block content
-	h1="Sign up"
+	h1="Sign Up"
+
+	form(id="register", method="post", action="sign-in")
+		input(type=text, name="firstname", id="firstname")
+		input(type=email, name="email", id="email")
+		input(type=password, name="password", id="password")
+		input(type=file, name="docfile", id="docfile")
+		button(type=submit, name="register", value="register")

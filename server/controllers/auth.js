@@ -1,5 +1,5 @@
 /*
- 
+
  */
 
 function Setup(Router, User, Passport){
@@ -9,9 +9,10 @@ function Setup(Router, User, Passport){
 			.get(function(req, res, next){
 		 		res.render('auth/sign-in');
 		 	})
-		 	.post(function(req, res, next){
-				res.render('auth/sign-in');
-		 	});
+		 	.post(
+				Passport.authenticate('local',{failureRedirect: '/sign-in'}), function(req, res){
+					res.redirect('/');
+				});
 
 	Router
 		.route('/sign-up')
@@ -19,15 +20,18 @@ function Setup(Router, User, Passport){
 		 		res.render('auth/sign-up');
 		 	})
 		 	.post(function(req, res, next){
-		 		
+
 		 	});
 
 	Router
 		.route('/sign-out')
 			.get(function(req, res, next){
 		 		req.logout();
-		 		res.redirect('/');
+		 		res.redirect('/sign-in');
 		 	});
+
+
+
 
 	Router
 		.route('/auth/twitter')
@@ -37,10 +41,10 @@ function Setup(Router, User, Passport){
 	Router
 		.route('/auth/twitter/callback')
 			.get(
-				Passport.authenticate('twitter', 
-										{ 
+				Passport.authenticate('twitter',
+										{
 											successRedirect: '/',
-                                     	  	failureRedirect: '/login' 
+                                     	  	failureRedirect: '/login'
                                      	 })
 		 	);
 
@@ -52,10 +56,10 @@ function Setup(Router, User, Passport){
 	Router
 		.route('/auth/google/return')
 			.get(
-				Passport.authenticate('google', 
-										{ 
+				Passport.authenticate('google',
+										{
 											successRedirect: '/',
-                                     		failureRedirect: '/login' 
+                                     		failureRedirect: '/login'
                                      	})
 		 	);
 
@@ -67,12 +71,12 @@ function Setup(Router, User, Passport){
 	Router
 		.route('/auth/facebook/callback')
 			.get(
-				Passport.authenticate('twitter', 
-										{ 
+				Passport.authenticate('twitter',
+										{
 											successRedirect: '/',
-                                     		failureRedirect: '/login' 
+                                     		failureRedirect: '/login'
                                      	})
-		 	);	
+		 	);
 
 }
 

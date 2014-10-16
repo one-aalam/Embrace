@@ -1,6 +1,8 @@
 
-var socket = io.connect('http://localhost');
-	socket.on('news', function(data){
-		console.log(data);
-		socket.emit('mail', {my:'data'});
+var socket = io();//.connect('//' + window.location.host);
+
+	
+
+	socket.on('model:added', function(data){
+			alert(JSON.stringify(data));
 	});

@@ -2,7 +2,7 @@
 2. Slick dependency injection
 3. Re-use controllers for server side views and API's
 4. Data fixture functionality
-5. Thin middlewares for 
+5. Thin middlewares for
       - Authentication
       - Authorization
       - Data transformations
