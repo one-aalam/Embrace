@@ -25,9 +25,9 @@ exports.setup = function(Router, Passport,Mw, Email){
 							subject:'Mail from Node',
 							text:'Hello!',
 							data:{
-
+								name:'Aftab'
 							}
-						},'newsletter');
+						},'welcome');
 
 					 res.render('post/new');
 				});
