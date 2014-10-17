@@ -1,6 +1,7 @@
-var busboy = require('connect-busboy');
 
-exports.setup = function(Router, Passport,Mw){
+
+
+exports.setup = function(Router, Passport,Mw, Email){
 	Router.get('/',
 		// Authenticate using HTTP Basic credentials, with session support disabled.
   		//passport.authenticate('digest', { session: false }),
@@ -20,6 +21,14 @@ exports.setup = function(Router, Passport,Mw){
 				.post(function(req,res){
 					 console.log(req.body);
 					 console.log(req.files);
+					  Email.send({
+							subject:'Mail from Node',
+							text:'Hello!',
+							data:{
+
+							}
+						},'newsletter');
+
 					 res.render('post/new');
 				});
 }
