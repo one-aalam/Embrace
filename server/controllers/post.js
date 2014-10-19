@@ -3,8 +3,8 @@
 
 exports.setup = function(Router, Db, App, Post){
 	// router
-	// 
-	
+	//
+
 	var Post = Db.crudify(Post);
 		/*
 		Post.add({
@@ -27,7 +27,6 @@ exports.setup = function(Router, Db, App, Post){
 		Post.all(function(err, docs){
 			console.log(docs);
 		});*/
-	
-	
-};
 
+
+};
