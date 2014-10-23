@@ -1,17 +1,13 @@
 {
 	"application":{
 		"name": "Gruntstart: Development",
-		"mailing":{
+		"email":{
 			"transport":"gmail",
-			"from":"",
-			"alwysCC":"",
-			"alwysBCC":"",
+			"sender":""
 		}
 	},
 	"express":{
-		"port": 3000,
-		"secret":'',
-		"salt":''
+		"port": 3000
 	},
 	"logger":{
 		"filename": "logs/run.log",
@@ -28,7 +24,7 @@
 		"secure":false,
 		"key":"express.sid"
 	},
-  "profiles":{
+	"profiles":{
 		"local":[
 
 		],
