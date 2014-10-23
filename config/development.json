@@ -1,12 +1,61 @@
 {
 	"application":{
-		"name": "Gruntstart: Development"
+		"name": "Gruntstart: Development",
+		"mailing":{
+			"transport":"gmail",
+			"from":"",
+			"alwysCC":"",
+			"alwysBCC":"",
+		}
 	},
 	"express":{
-		"port": 3000
+		"port": 3000,
+		"secret":'',
+		"salt":''
 	},
 	"logger":{
 		"filename": "logs/run.log",
 		"level":"silly"
+	},
+	"db":{
+		"mongo": {
+					"host": "localhost",
+						"db": "app_dev"
+			}
+	},
+	"session":{
+		"secret":"SECRET_PHRASE",
+		"secure":false,
+		"key":"express.sid"
+	},
+  "profiles":{
+		"local":[
+
+		],
+		"http":[
+
+		],
+		"twitter":{
+
+		},
+		"google":{
+
+		},
+		"facebook":{
+
+		}
+	},
+	"transports":{
+		"gmail":{
+			"user":"",
+			"password":""
+		},
+		"sendgrid":{
+
+		}
+	},
+	"uploads":{
+		"tmpDir":"",
+		"finalDir":""
 	}
 }

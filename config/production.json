@@ -1,6 +1,6 @@
 {
 	"application":{
-		"name": "Gruntstart"
+		"name": "Gruntstart: Production"
 	},
 	"express":{
 		"port": 3000
