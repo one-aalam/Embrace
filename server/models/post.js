@@ -30,8 +30,3 @@ PostSchema.virtual('post_id').get(function(){
 });
 
 module.exports = mongoose.model('Post',PostSchema);
-/*
- module.exports = {
-	Post: mongoose.model('Post',PostSchema);
- }
- */
