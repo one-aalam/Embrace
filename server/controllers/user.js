@@ -18,38 +18,39 @@ exports.setup = function(Router, App, Db, User, Post, Mw){
 	Router.param('user_id', function(req, res, next, id) {
 
 
-    User.get({
-      '_id':id
-    }, function(err,doc){
-      req.dbUser = doc;
-      next();
-    });
+		    User.get({
+		      '_id':id
+		    }, function(err,doc){
+		      req.dbUser = doc;
+		      next();
+		    });
 
-	});
+			});
 
-  Router.route('/profile').get(function(req, res, next){
-    res.json(req.user);
-  });
+		  Router.route('/profile').get(function(req, res, next){
+		    res.json(req.user);
+		  });
 
-	Router.route('/users/add').get(function(req, res, next){
-		res.render('auth/sign-up');
-	});
-	Router.route('/users')
-		  .get(function(req, res, next){
-		  	var _io = App.get('_io');
-		  		console.log(_io);
-		  	 User.all(function(err, docs){
-		  	 	res.send(docs);
-		  	 });
-		  })
+			Router.route('/users/add').get(function(req, res, next){
+				res.render('auth/sign-up');
+			});
+
+			Router.route('/users')
+				  .get(function(req, res, next){
+				  	var _io = App.get('_io');
+				  		console.log(_io);
+				  	 User.all(function(err, docs){
+				  	 	res.send(docs);
+				  	 });
+				  })
 
 
-		  .post(
-		  	// Middleware: Validator
-		  	Mw.validate({
-		  		'firstname':['isEmail'],
-		  		'email':['isEmail']
-		  	}),
+				  .post(
+				  	// Middleware: Validator
+				  	Mw.validate({
+				  		'firstname':['isEmail'],
+				  		'email':['isEmail']
+				  	}),
 
 		  	//Mw.dataMap({allow:[], remove[]}),
 
@@ -65,7 +66,7 @@ exports.setup = function(Router, App, Db, User, Post, Mw){
 					 'firstname':req.body.firstname,
 					 'lastname':req.body.lastname,
 					 'email':req.body.email,
-           'password':req.body.password
+           			 'password':req.body.password
 					}, function(user){
 					res.send(user);
 				});
