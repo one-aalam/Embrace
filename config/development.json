@@ -1,6 +1,6 @@
 {
 	"application":{
-		"name": "Gruntstart: Development",
+		"name": "Gruntstart: Development Server",
 		"email":{
 			"transport":"gmail",
 			"sender":""
@@ -16,7 +16,7 @@
 	"db":{
 		"mongo": {
 					"host": "localhost",
-						"db": "app_dev"
+					 "db": "app_dev"
 			}
 	},
 	"session":{
