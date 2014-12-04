@@ -1,10 +1,52 @@
 {
 	"application":{
 		"name": "Gruntstart: Development Server",
+		// Email Settings (User)
 		"email":{
-			"transport":"gmail",
-			"sender":""
-		}
+			"transport":"gmail", // mailgun, sendgrid
+			"defaults":{
+				"from":"",
+				"to":"",
+				"text":"",
+				"cc":"",
+				"subject":""
+			},
+			"creds":{
+				      "user":    "aftabbuddy",
+                      "password":"get8mei9",
+			},
+			"templates":{
+				"dir":"/public/templates"
+			}
+		},
+		// File uploads
+		"uploads":{
+			"tmpDir":"/busboy",
+			"finalDir":"/public/uploads"
+		},
+
+		// Social
+		"profiles":{
+			"local":[
+				{"username":"aalam","password":"aalam"},
+				{"username":"aalam","password":"aalam"}
+			],
+			"http":[
+
+			],
+			"twitter":{
+
+			},
+			"google":{
+
+			},
+			"facebook":{
+
+			},
+			"github":{
+
+			}
+		},
 	},
 	"express":{
 		"port": 3000
@@ -24,23 +66,6 @@
 		"secure":false,
 		"key":"express.sid"
 	},
-	"profiles":{
-		"local":[
-
-		],
-		"http":[
-
-		],
-		"twitter":{
-
-		},
-		"google":{
-
-		},
-		"facebook":{
-
-		}
-	},
 	"transports":{
 		"gmail":{
 			"user":"",
@@ -50,8 +75,5 @@
 
 		}
 	},
-	"uploads":{
-		"tmpDir":"",
-		"finalDir":""
-	}
+	
 }
