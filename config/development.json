@@ -1,120 +1,103 @@
 {
-	"application":{
-		"name": "Gruntstart: Development Server",
-		"company":"",
-		"project":"",
-
-		"port": 3000,
-		// Email Settings (User)
-		"email":{
-			"transport":"gmail", // mailgun, sendgrid
-			// from ...
-			"defaults":{
-				"from":"",
-				"to":"",
-				"text":"",
-				"cc":"",
-				"subject":""
-			},
-			// credentials
-			"creds":{
-				      "user":    "aftabbuddy",
-                      "password":"get8mei9",
-                      "host":"",
-                      "ssl": true
-			},
-			"templates":{
-				"dir":"/public/templates"
-			},
-			"system":"admin@system.com"
-		},
-		// File uploads
-		"uploads":{
-			"tmpDir":"/busboy",
-			"finalDir":"/public/uploads"
-		},
-		// Session settings
-		"login":{
-			"max_attempts":{
-				"for_ip":50,
-				"for_ip_and_user":7
-			},
-			"expiration":"20m",
-			"session":{
-					"secret":"SECRET_PHRASE",
-					"secure":false,
-					"key":"express.sid"
-			},
-			"crypto_key":""
-		},
-
-		// Social
-		"profiles":{
-			"local":[
-				{"username":"aalam","password":"aalam"},
-				{"username":"aalam","password":"aalam"}
-			],
-			"http":[
-				
-			],
-			"twitter":{
-				"key":"",
-				"secret":""
-			},
-			"google":{
-				"key":"",
-				"secret":""
-			},
-			"facebook":{
-				"key":"",
-				"secret":""
-			},
-			"github":{
-				"key":"",
-				"secret":""
-			}
-		},
-	},
-	"express":{
-		"port": 3000
-	},
-
-
-
-	// Developer settings
-
-
-	"logger":{
-		"filename": "logs/run.log",
-		"level":"silly"
-	},
-	"db":{
-		"mongo": {
-					"host": "localhost",
-					 "db": "app_dev"
-			}
-	},
-	"session":{
-		"secret":"SECRET_PHRASE",
-		"secure":false,
-		"key":"express.sid"
-	},
-	"transports":{
-		"gmail":{
-			"user":"",
-			"password":"",
-			"host":"smtp.gmail.com",
-			"ssl":true
-		},
-		"sendgrid":{
-
-		},
-		"mailgun":{
-
-		},
-		"smtp":{
-
-		}
-	},
-	
+    "application": {
+        "name": "Gruntstart: Development Server",
+        "company": "",
+        "project": "",
+        "port": 3000,
+        "email": {
+            "transport": "gmail",
+            "defaults": {
+                "from": "",
+                "to": "",
+                "text": "",
+                "cc": "",
+                "subject": ""
+            },
+            "creds": {
+                "user": "aftabbuddy",
+                "password": "get8mei9",
+                "host": "",
+                "ssl": true
+            },
+            "templates": {
+                "dir": "/public/templates"
+            },
+            "system": "admin@system.com"
+        },
+        "uploads": {
+            "tmpDir": "/busboy",
+            "finalDir": "/public/uploads"
+        },
+        "login": {
+            "max_attempts": {
+                "for_ip": 50,
+                "for_ip_and_user": 7
+            },
+            "expiration": "20m",
+            "session": {
+                "secret": "SECRET_PHRASE",
+                "secure": false,
+                "key": "express.sid"
+            },
+            "crypto_key": ""
+        },
+        "profiles": {
+            "local": [
+                {
+                    "username": "aalam",
+                    "password": "aalam"
+                },
+                {
+                    "username": "aalam",
+                    "password": "aalam"
+                }
+            ],
+            "http": [],
+            "twitter": {
+                "key": "",
+                "secret": ""
+            },
+            "google": {
+                "key": "",
+                "secret": ""
+            },
+            "facebook": {
+                "key": "",
+                "secret": ""
+            },
+            "github": {
+                "key": "",
+                "secret": ""
+            }
+        },
+        "express": {
+            "port": 3000
+        },
+        "logger": {
+            "filename": "logs/run.log",
+            "level": "silly"
+        },
+        "db": {
+            "mongo": {
+                "host": "localhost",
+                "db": "app_dev"
+            }
+        },
+        "session": {
+            "secret": "SECRET_PHRASE",
+            "secure": false,
+            "key": "express.sid"
+        },
+        "transports": {
+            "gmail": {
+                "user": "",
+                "password": "",
+                "host": "smtp.gmail.com",
+                "ssl": true
+            },
+            "sendgrid": {},
+            "mailgun": {},
+            "smtp": {}
+        }
+    }
 }
