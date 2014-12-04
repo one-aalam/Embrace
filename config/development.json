@@ -1,9 +1,14 @@
 {
 	"application":{
 		"name": "Gruntstart: Development Server",
+		"company":"",
+		"project":"",
+
+		"port": 3000,
 		// Email Settings (User)
 		"email":{
 			"transport":"gmail", // mailgun, sendgrid
+			// from ...
 			"defaults":{
 				"from":"",
 				"to":"",
@@ -11,18 +16,36 @@
 				"cc":"",
 				"subject":""
 			},
+			// credentials
 			"creds":{
 				      "user":    "aftabbuddy",
                       "password":"get8mei9",
+                      "host":"",
+                      "ssl": true
 			},
 			"templates":{
 				"dir":"/public/templates"
-			}
+			},
+			"system":"admin@system.com"
 		},
 		// File uploads
 		"uploads":{
 			"tmpDir":"/busboy",
 			"finalDir":"/public/uploads"
+		},
+		// Session settings
+		"login":{
+			"max_attempts":{
+				"for_ip":50,
+				"for_ip_and_user":7
+			},
+			"expiration":"20m",
+			"session":{
+					"secret":"SECRET_PHRASE",
+					"secure":false,
+					"key":"express.sid"
+			},
+			"crypto_key":""
 		},
 
 		// Social
@@ -32,25 +55,35 @@
 				{"username":"aalam","password":"aalam"}
 			],
 			"http":[
-
+				
 			],
 			"twitter":{
-
+				"key":"",
+				"secret":""
 			},
 			"google":{
-
+				"key":"",
+				"secret":""
 			},
 			"facebook":{
-
+				"key":"",
+				"secret":""
 			},
 			"github":{
-
+				"key":"",
+				"secret":""
 			}
 		},
 	},
 	"express":{
 		"port": 3000
 	},
+
+
+
+	// Developer settings
+
+
 	"logger":{
 		"filename": "logs/run.log",
 		"level":"silly"
@@ -69,9 +102,17 @@
 	"transports":{
 		"gmail":{
 			"user":"",
-			"password":""
+			"password":"",
+			"host":"smtp.gmail.com",
+			"ssl":true
 		},
 		"sendgrid":{
+
+		},
+		"mailgun":{
+
+		},
+		"smtp":{
 
 		}
 	},
