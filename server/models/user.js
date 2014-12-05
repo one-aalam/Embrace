@@ -21,10 +21,19 @@ var userSchema = new Schema({
 		required: true
 	},
 
-  password:{
-  	type:String, 
-  	required:true
-  },
+	  password:{
+	  	type:String, 
+	  	required:true
+	  },
+
+  	isVerified: { 
+  		type: String, 
+  		default: '' 
+  	},
+	verificationToken: { 
+		type: String, 
+		default: '' 
+	},
 
   resetPasswordToken:String,
   resetPasswordExpires: Date,
@@ -48,6 +57,17 @@ var userSchema = new Schema({
 		type: String, 
 		required: false
 	},
+	company: { type: String, default: '' },
+phone: { type: String, default: '' },
+zip: { type: String, default: '' },
+status: {
+id: { type: String, ref: 'Status' },
+name: { type: String, default: '' },
+userCreated: {
+id: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+name: { type: String, default: '' },
+time: { type: Date, default: Date.now }
+}
   },
 
 
