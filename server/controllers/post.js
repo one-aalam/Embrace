@@ -28,5 +28,7 @@ exports.setup = function(Router, Db, App, Post){
 			console.log(docs);
 		});*/
 
+		
+
 
 };

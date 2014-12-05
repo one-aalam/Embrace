@@ -1,8 +1,11 @@
 {
     "application": {
+
         "name": "Gruntstart: Development Server",
         "company": "",
         "project": "",
+        "copyrightStr":"",
+        
         "port": 3000,
         "email": {
             "transport": "gmail",
