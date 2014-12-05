@@ -9,7 +9,7 @@ var mongoose = require('mongoose'),
     MAX_LOGIN_ATTEMPTS = 5,
     LOCK_TIME = 2 * 60 * 60 * 1000;
 
-
+// https://www.owasp.org/index.php/Authentication_Cheat_Sheet#Implement_Account_Lockout
 var userSchema = new Schema({
  	username:{
  		type:String, 

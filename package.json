@@ -25,6 +25,7 @@
   "dependencies": {
     "async": "^0.9.0",
     "bcrypt": "^0.7.8",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.4.3",
     "busboy": "^0.2.9",
     "caller": "^1.0.0",
