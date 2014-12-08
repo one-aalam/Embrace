@@ -1,6 +1,0 @@
-"Amount","Description","Note","OwnerEmailId","ResourceTransactionCategoryId","TransactionDate"
-2500.78,"Contribute",1,"nilesh@abc.com","Owner Contribution",06/25/2014
--1000.5,"withdrawal",2,"nilesh@abc.com","Owner Withdrawal",06/25/2014
--200.2,"Inmprovement",3,"nilesh@abc.com","Improvements",06/25/2014
--150,"other",4,"nilesh@abc.com","Uncategorized",06/25/2014
-50,"pos other",5,"nilesh@abc.com","Utilities",06/25/2014
