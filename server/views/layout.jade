@@ -3,8 +3,13 @@ html(lang="en")
 		head
 			meta(charset="utf-8")
 			title #{title}
-			link(type="text/css",rel="stylesheet",href="../stylesheets/style.css")
+			link(type="text/css",rel="stylesheet",href="/style/normalize.css")
+			link(type="text/css",rel="stylesheet",href="/style/foundation.min.css")
+			link(type="text/css",rel="stylesheet",href="/style/style.css")
+			script(src="/script/vendor/modernizr.js")
 			script(src="/socket.io/socket.io.js")
-			script(src="/javascript/socket.js")
 		body
 			block content
+			script(src="/script/vendor/jquery.js")
+			script(src="/script/foundation.min.js")
+			script(src="/script/socket.js")

@@ -1,9 +1,16 @@
 extends ../layout
 
 block content
-	h1="Sign in"
-
-	form(id="register", method="post", action="sign-in")
-		input(type=text, name="username", id="username")
-		input(type=password, name="password", id="password")
-		button(type=submit, name="login", value="Sign In")
+	.row
+		.large-12.columns
+			h1="Sign in"
+	.row
+		.large-12.columns
+			.panel
+				h3="Sign in..."
+					form(id="register", method="post", action="sign-in")
+						.large-4.columns
+							input(type=text, name="username", id="username")
+						.large-4.columns
+							input(type=password, name="password", id="password") 
+						button(type=submit, name="login", value="Sign In") Sign In

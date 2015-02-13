@@ -1,5 +1,5 @@
 var mongoose = require('mongoose'),
-    bcrypt = require('bcrypt'), 
+    bcrypt = require('bcrypt-nodejs'), 
     Schema    = mongoose.Schema
 
     ,
@@ -10,6 +10,8 @@ var mongoose = require('mongoose'),
     LOCK_TIME = 2 * 60 * 60 * 1000;
 
 // https://www.owasp.org/index.php/Authentication_Cheat_Sheet#Implement_Account_Lockout
+// http://stackoverflow.com/questions/549/the-definitive-guide-to-form-based-website-authentication
+// http://npmawesome.com/posts/2014-03-06-lockit/
 var userSchema = new Schema({
  	username:{
  		type:String, 
@@ -20,7 +22,6 @@ var userSchema = new Schema({
 		type: String, 
 		required: true
 	},
-
 	  password:{
 	  	type:String, 
 	  	required:true
@@ -57,20 +58,19 @@ var userSchema = new Schema({
 		type: String, 
 		required: false
 	},
-	company: { type: String, default: '' },
-phone: { type: String, default: '' },
-zip: { type: String, default: '' },
-status: {
-id: { type: String, ref: 'Status' },
-name: { type: String, default: '' },
-userCreated: {
-id: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-name: { type: String, default: '' },
-time: { type: Date, default: Date.now }
-}
-  },
-
-
+	company: { 
+        type: String, 
+        default: '' 
+    },
+    phone: { 
+        type: String, 
+        default: '' 
+    },
+    zip: { 
+        type: String, 
+        default: '' 
+    }
+  }
 });
 
 userSchema.virtual('isLocked').get(function() {
